@@ -10,7 +10,9 @@
     "migrate": "tsx src/db/migrate.ts",
     "seed": "tsx src/db/seed.ts",
     "simulate": "tsx src/db/simulate-payment.ts",
-    "build:client": "cd client && npm run build"
+    "build:client": "cd client && npm run build",
+    "build:sdk": "cd sdk && npx tsc",
+    "postinstall": "npm run build:sdk"
   },
   "dependencies": {
     "@fastify/cors": "^11.2.0",
